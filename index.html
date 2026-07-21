@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Card Masters | History of Mobile Card Games</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- Animated Background -->
+
+<div class="background"></div>
+
+<!-- ================= HOME SCREEN ================= -->
+
+<section id="home">
+
+<h1>🎴 CARD MASTERS</h1>
+
+<h2>History of Mobile Card Games</h2>
+
+<p>
+
+Travel through the history of mobile card games.
+
+Open card packs, answer quiz questions,
+
+and earn points for your team!
+
+</p>
+
+<button id="startBtn">
+
+START GAME
+
+</button>
+
+</section>
+
+<!-- ================= GAME SCREEN ================= -->
+
+<section id="game" class="hidden">
+
+<!-- Scoreboard -->
+
+<div class="scoreboard">
+
+<div class="team">
+
+<h2>👥 Group 1</h2>
+
+<h1 id="score1">0</h1>
+
+</div>
+
+<div class="team">
+
+<h2>👥 Group 2</h2>
+
+<h1 id="score2">0</h1>
+
+</div>
+
+<div class="team">
+
+<h2>👥 Group 3</h2>
+
+<h1 id="score3">0</h1>
+
+</div>
+
+</div>
+
+<!-- Current Group -->
+
+<div class="turnBox">
+
+Current Turn
+
+<h2 id="currentGroup">
+
+GROUP 1
+
+</h2>
+
+</div>
+
+<!-- Progress -->
+
+<div class="progress">
+
+<div id="progressBar"></div>
+
+</div>
+
+<!-- Card Pack -->
+
+<div class="pack" id="pack">
+
+<div class="packFront">
+
+<h1>🎴</h1>
+
+<h2>Card Pack</h2>
+
+<p>
+
+Click to Open
+
+</p>
+
+</div>
+
+</div>
+
+<!-- Revealed Card -->
+
+<div class="gameCard hidden" id="gameCard">
+
+<h1 id="cardTitle">
+
+Pokemon TCG
+
+</h1>
+
+<p id="cardFact">
+
+Fact goes here...
+
+</p>
+
+</div>
+
+<!-- Question -->
+
+<div id="quiz" class="hidden">
+
+<h2 id="question">
+
+Question goes here
+
+</h2>
+
+<div id="choices">
+
+</div>
+
+</div>
+
+<!-- Next -->
+
+<button id="nextBtn" class="hidden">
+
+NEXT TURN
+
+</button>
+
+</section>
+
+<!-- ================= WINNER ================= -->
+
+<section id="winner" class="hidden">
+
+<h1>
+
+🏆 GAME OVER
+
+</h1>
+
+<h2 id="winnerText">
+
+GROUP 1 WINS!
+
+</h2>
+
+<button onclick="location.reload()">
+
+PLAY AGAIN
+
+</button>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

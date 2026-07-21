@@ -1,0 +1,499 @@
+/* ===========================
+GENERAL
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#08111f;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* ===========================
+ANIMATED BACKGROUND
+=========================== */
+
+.background{
+    position:fixed;
+    inset:0;
+    z-index:-1;
+    background:linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a,
+    #312e81,
+    #4c1d95
+    );
+    background-size:400% 400%;
+    animation:bg 12s infinite alternate;
+}
+
+@keyframes bg{
+
+0%{background-position:left;}
+
+100%{background-position:right;}
+
+}
+
+/* ===========================
+HIDDEN
+=========================== */
+
+.hidden{
+    display:none;
+}
+
+/* ===========================
+HOME
+=========================== */
+
+#home{
+    text-align:center;
+    padding-top:80px;
+}
+
+#home h1{
+    font-size:70px;
+    color:#FFD54F;
+    text-shadow:0 0 25px gold;
+}
+
+#home h2{
+    margin-top:15px;
+}
+
+#home p{
+    width:70%;
+    margin:25px auto;
+    line-height:30px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    padding:15px 35px;
+    border-radius:50px;
+    background:#FFD54F;
+    color:black;
+    font-weight:bold;
+    font-size:18px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 20px gold;
+}
+
+/* ===========================
+GAME
+=========================== */
+
+#game{
+    padding:30px;
+}
+
+/* ===========================
+SCOREBOARD
+=========================== */
+
+.scoreboard{
+
+display:flex;
+
+justify-content:center;
+
+gap:25px;
+
+flex-wrap:wrap;
+
+margin-bottom:30px;
+
+}
+
+.team{
+
+width:220px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(255,255,255,.1);
+
+backdrop-filter:blur(10px);
+
+box-shadow:0 0 20px rgba(255,255,255,.15);
+
+text-align:center;
+
+}
+
+.team h1{
+
+font-size:55px;
+
+color:#FFD54F;
+
+}
+
+/* ===========================
+TURN BOX
+=========================== */
+
+.turnBox{
+
+margin:25px auto;
+
+width:320px;
+
+padding:20px;
+
+border-radius:20px;
+
+background:rgba(0,0,0,.35);
+
+text-align:center;
+
+}
+
+.turnBox h2{
+
+margin-top:10px;
+
+color:#00E5FF;
+
+}
+
+/* ===========================
+PROGRESS BAR
+=========================== */
+
+.progress{
+
+width:80%;
+
+height:22px;
+
+margin:30px auto;
+
+background:#333;
+
+border-radius:30px;
+
+overflow:hidden;
+
+}
+
+#progressBar{
+
+width:0%;
+
+height:100%;
+
+background:linear-gradient(to right,#00E676,#76FF03);
+
+transition:.5s;
+
+}
+
+/* ===========================
+CARD PACK
+=========================== */
+
+.pack{
+
+width:260px;
+
+height:360px;
+
+margin:auto;
+
+border-radius:20px;
+
+background:linear-gradient(135deg,#ff9800,#ffc107);
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+cursor:pointer;
+
+transition:.3s;
+
+box-shadow:0 0 30px gold;
+
+}
+
+.pack:hover{
+
+transform:scale(1.05);
+
+}
+
+.packFront{
+
+text-align:center;
+
+}
+
+.packFront h1{
+
+font-size:90px;
+
+}
+
+.packFront h2{
+
+margin-top:10px;
+
+}
+
+/* ===========================
+GAME CARD
+=========================== */
+
+.gameCard{
+
+width:500px;
+
+max-width:90%;
+
+margin:30px auto;
+
+padding:30px;
+
+background:white;
+
+color:black;
+
+border-radius:20px;
+
+box-shadow:0 0 35px rgba(255,255,255,.4);
+
+text-align:center;
+
+}
+
+.gameCard h1{
+
+color:#ff9800;
+
+margin-bottom:15px;
+
+}
+
+.gameCard p{
+
+line-height:28px;
+
+}
+
+/* ===========================
+QUIZ
+=========================== */
+
+#quiz{
+
+margin-top:30px;
+
+}
+
+#question{
+
+margin-bottom:25px;
+
+}
+
+#choices{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:20px;
+
+width:80%;
+
+margin:auto;
+
+}
+
+.choice{
+
+padding:18px;
+
+background:#3949ab;
+
+border-radius:15px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.choice:hover{
+
+background:#5c6bc0;
+
+transform:translateY(-4px);
+
+}
+
+/* ===========================
+NEXT BUTTON
+=========================== */
+
+#nextBtn{
+
+display:block;
+
+margin:35px auto;
+
+}
+
+/* ===========================
+WINNER
+=========================== */
+
+#winner{
+
+text-align:center;
+
+padding-top:120px;
+
+}
+
+#winner h1{
+
+font-size:65px;
+
+color:#FFD54F;
+
+text-shadow:0 0 20px gold;
+
+}
+
+#winner h2{
+
+margin:20px 0;
+
+}
+
+/* ===========================
+RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+#home h1{
+
+font-size:45px;
+
+}
+
+#home p{
+
+width:95%;
+
+}
+
+#choices{
+
+grid-template-columns:1fr;
+
+width:95%;
+
+}
+
+.team{
+
+width:90%;
+
+}
+
+}
+
+/* ===========================
+ANIMATIONS
+=========================== */
+
+@keyframes shake{
+
+0%{transform:translateX(0);}
+20%{transform:translateX(-8px);}
+40%{transform:translateX(8px);}
+60%{transform:translateX(-8px);}
+80%{transform:translateX(8px);}
+100%{transform:translateX(0);}
+
+}
+
+.shake{
+
+animation:shake .4s;
+
+}
+
+.correct{
+
+background:#4CAF50 !important;
+color:white !important;
+
+}
+
+.wrong{
+
+background:#E53935 !important;
+color:white !important;
+
+}
+
+.pack{
+
+transition:.5s;
+
+}
+
+.pack.open{
+
+transform:scale(1.15) rotate(8deg);
+
+opacity:0;
+
+}
+
+.gameCard{
+
+animation:appear .5s;
+
+}
+
+@keyframes appear{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
